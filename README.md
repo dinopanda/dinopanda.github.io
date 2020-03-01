@@ -1,6 +1,7 @@
 ## Links cause what are tabs
 
 [dinopanda.github.io/about](https://dinopanda.github.io/about)
+[dinopanda.github.io/wirelesskeyboard](https://dinopanda.github.io/wirelesskeyboard)
 
 ## Welcome to GitHub Pages
 
