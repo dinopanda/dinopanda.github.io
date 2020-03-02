@@ -84,18 +84,10 @@ Luckily the Keebio people (or is it person?) are nice and have commited to the Q
 
 This however is not what we want, but this means we have to do very "little" work to get this working. The TLDR is that i came up with this new pinout for the Feather. This piece of code is found in the config.h file.
 
-<code>
-#define MATRIX_ROW_PINS { F7, B7, B5, D7, C6, D0 }
-</code>
-<code>
-#define MATRIX_COL_PINS { F6, F5, F4, F1, F0, D2, D3, B6 } 
-</code>
-<code>
-#define MATRIX_ROW_PINS_RIGHT { F7, B7, B5, D7, C6, D0 }
-</code>
-<code>
-#define MATRIX_COL_PINS_RIGHT { F6, F5, F4, F1, F0, D2, D3, B6 }
-</code>
+    #define MATRIX_ROW_PINS { F7, B7, B5, D7, C6, D0 }
+    #define MATRIX_COL_PINS { F6, F5, F4, F1, F0, D2, D3, B6 } 
+    #define MATRIX_ROW_PINS_RIGHT { F7, B7, B5, D7, C6, D0 }
+    #define MATRIX_COL_PINS_RIGHT { F6, F5, F4, F1, F0, D2, D3, B6 }
 
 To get to this point was relatively easy, just a painful process of remapping from one board to another. Really i could have done less work but i didn't know what i was doing it, so it was extra long and painful. 
 
