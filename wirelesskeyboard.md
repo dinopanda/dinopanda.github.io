@@ -24,3 +24,4 @@ This starts from their own build guide [https://docs.keeb.io/quefrency-build-gui
 * Knowledge #3 - Bluetooth (nRF51822) - QMK with the power of community anything is possible. Bluetooth is already supported and with a couple options as well, [https://docs.qmk.fm/#/feature_bluetooth](https://docs.qmk.fm/#/feature_bluetooth). Their links led me to the Adafruit company, down to a search and found out about a product line called [Feather](https://www.adafruit.com/category/777). They have a product with the nRF51822 bluetooth chip as well as the ATmega32U4 processor, [https://www.adafruit.com/product/2829](https://www.adafruit.com/product/2829). 
 
 # Idea
+The idea? Simple. Can i smash this different size dev board where a smaller dev board was designed to fit to give it bluetooth capabilities? Answer. Yes. 
