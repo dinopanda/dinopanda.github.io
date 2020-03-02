@@ -8,7 +8,7 @@ This is a build guide, but it's mostly my journey into the depths of the keyboar
 # Research
 A quick google search of "wireless split keyboard" does not in fact lead to the dream but a bunch of lame big company ergo keyboards that are wireless. lame.
 
-"wireless split keyboard reddit" on the other hand does direct us to one of the best designed keyboards and well documented build process, the Mitosis keyboard [https://www.reddit.com/r/MechanicalKeyboards/comments/66588f/wireless_split_qmk_mitosis/](https://www.reddit.com/r/MechanicalKeyboards/comments/66588f/wireless_split_qmk_mitosis/). This keyboard is A+ design of reusability of PCBs and A+ documentation. But, didn't fit my dreams of a "normal" keyboard. The custom bluetooth receiver though is a bit much. Wonderfully designed and done, but too much for me. The search continues... 
+"wireless split keyboard reddit" on the other hand does direct us to one of the best designed keyboards and well documented build process, the Mitosis keyboard [https://www.reddit.com/r/MechanicalKeyboards/comments/66588f/wireless_split_qmk_mitosis/](https://www.reddit.com/r/MechanicalKeyboards/comments/66588f/wireless_split_qmk_mitosis/). This keyboard is A++ design of reusability of PCBs and A+ documentation. But, didn't fit my dreams of a "normal" keyboard. The custom bluetooth receiver though is a bit much. Wonderfully designed and done, but too much for me. The search continues... 
 
 Googling and asking friends came upon this normal looking split keyboard from Keebio [https://keeb.io/products/quefrency-60-65-split-staggered-keyboard](https://keeb.io/products/quefrency-60-65-split-staggered-keyboard). Clearly we have standard keybard split by the left and right now sides (looks good so far), but is not wireless... Why do we even have wires in this day and age?
 
@@ -25,3 +25,36 @@ This starts from their own build guide [https://docs.keeb.io/quefrency-build-gui
 
 # Idea
 The idea? Simple. Can i smash this different size dev board where a smaller dev board was designed to fit to give it bluetooth capabilities? Answer. Yes. 
+
+# Execution
+The actual build part or maybe it's just the part where i say i did the idea and done. Cause really that's what happened.
+
+## Step 1 - Parts
+First things first, what am i even smashing together. 
+
+* 1x - Left hand Board - this comes with the necessary diodes
+* 1x - Right hand Board - this comes with the necessary diodes
+* 1x - Left hand Case
+* 1x - Right hand Case
+* ~4 - Cherry MX Stabilizers (i ended up using 4, depending on your setup you might need more or less)
+* 2x - Bluetooth Microcontrollers (Adafruit Feather 32u4 Bluefruit LE)
+* 2x - 3.7v Li-Ion Poly batteries (Various sizes could work, found a 1200mAh that was thin and fit)
+* 2x - Small switches 
+* Enough Solid Core Wire - 22AWG - Would recommend at least getting 2 colors (red and black) for power and ground
+* Some extra standoffs for keyboard height
+
+Various tools, soldering iron, multimeter, wire strippers, and wire cutters.
+
+Links:
+* Base keyboard parts all bought from Keebio - [https://keeb.io/products/quefrency-60-65-split-staggered-keyboard] (https://keeb.io/products/quefrency-60-65-split-staggered-keyboard)
+* Cherry MX Stabilizers - [https://keeb.io/products/cherry-mx-stabilizer](https://keeb.io/products/cherry-mx-stabilizer)
+* Bluetooth Microcontroller from Adafruit - [https://www.adafruit.com/product/2829](https://www.adafruit.com/product/2829)
+* Li-Ion Poly Batteries - [https://www.adafruit.com/product/258](https://www.adafruit.com/product/258)
+* Small Switches - [https://www.adafruit.com/product/805](https://www.adafruit.com/product/805)
+* Solid Core Wire - [https://www.adafruit.com/product/288](https://www.adafruit.com/product/288)
+* Plastic standoffs - [https://www.adafruit.com/product/3299](https://www.adafruit.com/product/3299)
+* Wire Strippers - [https://www.adafruit.com/product/527](https://www.adafruit.com/product/527)
+* Wire Cutters - [https://www.adafruit.com/product/152](https://www.adafruit.com/product/152)
+* Soldering iron - find something reasonable
+* multimeter - any cheap one will work for keyboards
+
