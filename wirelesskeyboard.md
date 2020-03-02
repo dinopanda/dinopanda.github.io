@@ -24,7 +24,7 @@ This starts from their own build guide [https://docs.keeb.io/quefrency-build-gui
 * Knowledge #3 - Bluetooth (nRF51822) - QMK with the power of community anything is possible. Bluetooth is already supported and with a couple options as well, [https://docs.qmk.fm/#/feature_bluetooth](https://docs.qmk.fm/#/feature_bluetooth). Their links led me to the Adafruit company, down to a search and found out about a product line called [Feather](https://www.adafruit.com/category/777). They have a product with the nRF51822 bluetooth chip as well as the ATmega32U4 processor, [https://www.adafruit.com/product/2829](https://www.adafruit.com/product/2829). 
 
 # Idea
-The idea? Simple. Can i smash this different size dev board where a smaller dev board was designed to fit to give it bluetooth capabilities? Answer. Yes. 
+The idea? Simple. Can i smash this different size dev board where a smaller dev board was designed to fit, to give it bluetooth capabilities? Answer. Yes. 
 
 # Execution
 The actual build part or maybe it's just the part where i say i did the idea and done. Cause really that's what happened.
@@ -58,3 +58,60 @@ Links:
 * Soldering iron - find something reasonable
 * multimeter - any cheap one will work for keyboards
 
+## Step 2 - QMK
+Problem: Adafruit Feather 32u4 (will be called Feather for the rest of this adventure) does not have the exact same layout as the Pro Mirco in the Quefrency guide.
+
+Solution: Rebuild the the QMK firmware for the new physical pinout of the Feather to reduce the amount of wire crossing while soldering to board. 
+
+Thus research and testing is necessary. 
+
+### QMK 
+Let's get into this QMK business some more.
+
+As in you should get familiar with their stuff.
+
+#### Environment
+Luckily the community is good and has documentation as we found out earlier. But what are we trying to do now? Custom keyboard layout and new pinouts. Hmm... Seems like more than i bargained for. But first, setup, we need the build environment to create whatever is going to be flashed onto the Feather.
+
+Follow their guide to how to build to your liking: [https://docs.qmk.fm/](https://docs.qmk.fm/)
+
+As for me, i ended using the Bash on Windows setup with the QMK ToolBox: [https://docs.qmk.fm/#/getting_started_build_tools?id=creators-update](https://docs.qmk.fm/#/getting_started_build_tools?id=creators-update) - [https://github.com/qmk/qmk_toolbox/releases](https://github.com/qmk/qmk_toolbox/releases)
+
+I found the new Bash on Windows to be easy to install the toolchain and also path into native windows directory. The QMK TooBox is easy as finding the built file and clicking a button. 
+
+#### Firmware
+Luckily the Keebio people (or is it person?) are nice and have commited to the QMK code base and added their own everything, that works if you follow their build guide exactly and want their layouts: [https://github.com/qmk/qmk_firmware/tree/master/keyboards/keebio/quefrency](https://github.com/qmk/qmk_firmware/tree/master/keyboards/keebio/quefrency)
+
+This however is not what we want, but this means we have to do very "little" work to get this working. The TLDR is that i came up with this new pinout for the Feather. This piece of code is found in the config.h file.
+
+<code>
+#define MATRIX_ROW_PINS { F7, B7, B5, D7, C6, D0 }
+</code>
+<code>
+#define MATRIX_COL_PINS { F6, F5, F4, F1, F0, D2, D3, B6 } 
+</code>
+<code>
+#define MATRIX_ROW_PINS_RIGHT { F7, B7, B5, D7, C6, D0 }
+</code>
+<code>
+#define MATRIX_COL_PINS_RIGHT { F6, F5, F4, F1, F0, D2, D3, B6 }
+</code>
+
+To get to this point was relatively easy, just a painful process of remapping from one board to another. Really i could have done less work but i didn't know what i was doing it, so it was extra long and painful. 
+
+Really just by looking at the Feather pinout diagram they provided, [https://learn.adafruit.com/adafruit-feather-32u4-bluefruit-le/pinouts](https://learn.adafruit.com/adafruit-feather-32u4-bluefruit-le/pinouts), i was able to map that to the pinouts defined in the code for the inteded Pro Micro controller. I just had to make sure on the Feather i didn't use any ports that were used by the bluetooth module: aka PB1 (SCK), PB2 (MOSI), PB3 (MISO). Mapping this way would not physically twist the wires, which was the only goal. 
+
+Quefrency did intend the D0 pinout to be the SOFT_SERIAL_PIN for the split keyboard (one way to tell which half is left vs right), but since they are wireless (going to show up as individual keyboards) this pin is useless really and i ended up mapping it to something i wasn't using, D1. 
+
+#### Build
+To build this firmware, i decided to do the lazy route. Since these bluetooth modules can not act as receivers, they will just both be views as stand alone keyboards just missing their butter half. 
+
+The QMK Docs again came in handy and found out how to easily do this: [https://docs.qmk.fm/#/feature_split_keyboard?id=handedness-by-define](https://docs.qmk.fm/#/feature_split_keyboard?id=handedness-by-define). Simply add the <code>#define MASTER_LEFT</code> or <code>#define MASTER_RIGHT</code> in the same config.h file. 
+
+This means all we have to do to get working firmware now is build 2 separate versions, one with the <code>#define MASTER_LEFT</code> and one with <code>#define MASTER_RIGHT</code> and flash the left and right Feather with the appropriate build. 
+
+# All the Goodies
+* QMK Docs - [https://docs.qmk.fm/](https://docs.qmk.fm/)
+* Adafruit Feather 32u4 Pinout - [https://learn.adafruit.com/adafruit-feather-32u4-bluefruit-le/pinouts](https://learn.adafruit.com/adafruit-feather-32u4-bluefruit-le/pinouts)
+* Keyboard Layout Generator - [https://config.qmk.fm/#/](https://config.qmk.fm/#/)
+* Keyboard Plate Designer - [http://builder.swillkb.com/](http://builder.swillkb.com/)
