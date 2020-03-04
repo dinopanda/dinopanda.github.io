@@ -46,7 +46,7 @@ First things first, what am i even smashing together.
 Various tools, soldering iron, multimeter, wire strippers, and wire cutters.
 
 Links:
-* Base keyboard parts all bought from Keebio - [https://keeb.io/products/quefrency-60-65-split-staggered-keyboard] (https://keeb.io/products/quefrency-60-65-split-staggered-keyboard)
+* Base keyboard parts all bought from Keebio - [https://keeb.io/products/quefrency-60-65-split-staggered-keyboard](https://keeb.io/products/quefrency-60-65-split-staggered-keyboard)
 * Cherry MX Stabilizers - [https://keeb.io/products/cherry-mx-stabilizer](https://keeb.io/products/cherry-mx-stabilizer)
 * Bluetooth Microcontroller from Adafruit - [https://www.adafruit.com/product/2829](https://www.adafruit.com/product/2829)
 * Li-Ion Poly Batteries - [https://www.adafruit.com/product/258](https://www.adafruit.com/product/258)
@@ -82,12 +82,14 @@ I found the new Bash on Windows to be easy to install the toolchain and also pat
 #### Firmware
 Luckily the Keebio people (or is it person?) are nice and have commited to the QMK code base and added their own everything, that works if you follow their build guide exactly and want their layouts: [https://github.com/qmk/qmk_firmware/tree/master/keyboards/keebio/quefrency](https://github.com/qmk/qmk_firmware/tree/master/keyboards/keebio/quefrency)
 
-This however is not what we want, but this means we have to do very "little" work to get this working. The TLDR is that i came up with this new pinout for the Feather. This piece of code is found in the config.h file.
+This however is not what we want, but this means we have to do very "little" work to get this working. The TLDR is that i came up with this new pinout for the Feather. This piece of code is found in the config.h file (this config.h would be under something like rev1/config.h).
 
     #define MATRIX_ROW_PINS { F7, B7, B5, D7, C6, D0 }
     #define MATRIX_COL_PINS { F6, F5, F4, F1, F0, D2, D3, B6 } 
     #define MATRIX_ROW_PINS_RIGHT { F7, B7, B5, D7, C6, D0 }
     #define MATRIX_COL_PINS_RIGHT { F6, F5, F4, F1, F0, D2, D3, B6 }
+
+You can also edit product name and such in this file for example <code>#define PRODUCT SAUR</code>. So if you're like me you can name your left hand side DINO and the right hand side SAUR. Just for fun.
 
 To get to this point was relatively easy, just a painful process of remapping from one board to another. Really i could have done less work but i didn't know what i was doing it, so it was extra long and painful. 
 
