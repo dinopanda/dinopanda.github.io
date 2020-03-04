@@ -142,7 +142,37 @@ Well wasn't that easy.
 Just like that dreams are made
 
 # All the Goodies
+## QMK
+* QMK Github - [https://github.com/qmk/qmk_firmware](https://github.com/qmk/qmk_firmware)
 * QMK Docs - [https://docs.qmk.fm/](https://docs.qmk.fm/)
+* QMK Toolbox - [https://github.com/qmk/qmk_toolbox/releases](https://github.com/qmk/qmk_toolbox/releases)
+* QMK Environment Docs - [https://docs.qmk.fm/#/getting_started_build_tools?id=creators-update](https://docs.qmk.fm/#/getting_started_build_tools?id=creators-update)
+* QMK Bluetooth Docs - [https://docs.qmk.fm/#/feature_bluetooth](https://docs.qmk.fm/#/feature_bluetooth)
+* QMK Split Docs - [https://docs.qmk.fm/#/feature_split_keyboard](https://docs.qmk.fm/#/feature_split_keyboard)
+* QMK Github for Quefrency - [https://github.com/qmk/qmk_firmware/tree/master/keyboards/keebio/quefrency](https://github.com/qmk/qmk_firmware/tree/master/keyboards/keebio/quefrency)
+* QMK Github for Quefrency old rules.mk - [https://github.com/qmk/qmk_firmware/blob/b2ee290c9f506e42dd9c4577c8147646c405aeb0/keyboards/keebio/quefrency/rules.mk](https://github.com/qmk/qmk_firmware/blob/b2ee290c9f506e42dd9c4577c8147646c405aeb0/keyboards/keebio/quefrency/rules.mk)
+
+## Keebio
+* Quefrency - [https://keeb.io/products/quefrency-60-65-split-staggered-keyboard](https://keeb.io/products/quefrency-60-65-split-staggered-keyboard)
+* Quefrency build guide - [https://docs.keeb.io/quefrency-build-guide/](https://docs.keeb.io/quefrency-build-guide/)
+* Cherry MX Stabilizers - [https://keeb.io/products/cherry-mx-stabilizer](https://keeb.io/products/cherry-mx-stabilizer)
+* Pro Mirco Micro USB - [https://keeb.io/products/pro-micro-5v-16mhz-arduino-compatible-atmega32u4](https://keeb.io/products/pro-micro-5v-16mhz-arduino-compatible-atmega32u4)
+* Pro Mirco USB C - [https://keeb.io/products/elite-c-usb-c-pro-micro-replacement-arduino-compatible-atmega32u4](https://keeb.io/products/elite-c-usb-c-pro-micro-replacement-arduino-compatible-atmega32u4)
+* Pro Mirco USB C Low Profile - [https://keeb.io/products/elite-c-low-profile-version-usb-c-pro-micro-replacement-atmega32u4](https://keeb.io/products/elite-c-low-profile-version-usb-c-pro-micro-replacement-atmega32u4)
+
+## Adafruit
 * Adafruit Feather 32u4 Pinout - [https://learn.adafruit.com/adafruit-feather-32u4-bluefruit-le/pinouts](https://learn.adafruit.com/adafruit-feather-32u4-bluefruit-le/pinouts)
+* Bluetooth Microcontroller from Adafruit - [https://www.adafruit.com/product/2829](https://www.adafruit.com/product/2829)
+* Li-Ion Poly Batteries - [https://www.adafruit.com/product/258](https://www.adafruit.com/product/258)
+* Small Switches - [https://www.adafruit.com/product/805](https://www.adafruit.com/product/805)
+* Solid Core Wire - [https://www.adafruit.com/product/288](https://www.adafruit.com/product/288)
+* Plastic standoffs - [https://www.adafruit.com/product/3299](https://www.adafruit.com/product/3299)
+* Wire Strippers - [https://www.adafruit.com/product/527](https://www.adafruit.com/product/527)
+* Wire Cutters - [https://www.adafruit.com/product/152](https://www.adafruit.com/product/152)
+
+## Mitosis
+* Mitosis keyboard - [https://www.reddit.com/r/MechanicalKeyboards/comments/66588f/wireless_split_qmk_mitosis/](https://www.reddit.com/r/MechanicalKeyboards/comments/66588f/wireless_split_qmk_mitosis/)
+
+## Extras
 * Keyboard Layout Generator - [https://config.qmk.fm/#/](https://config.qmk.fm/#/)
 * Keyboard Plate Designer - [http://builder.swillkb.com/](http://builder.swillkb.com/)
