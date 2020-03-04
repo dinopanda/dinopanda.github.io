@@ -77,7 +77,7 @@ Follow their guide to how to build to your liking: [https://docs.qmk.fm/](https:
 
 As for me, i ended using the Bash on Windows setup with the QMK Toolbox: [https://docs.qmk.fm/#/getting_started_build_tools?id=creators-update](https://docs.qmk.fm/#/getting_started_build_tools?id=creators-update) - [https://github.com/qmk/qmk_toolbox/releases](https://github.com/qmk/qmk_toolbox/releases)
 
-I found the new Bash on Windows to be easy to install the toolchain and also path into native windows directory. The QMK TooBox is easy as finding the built file and clicking a button. 
+I found the new Bash on Windows to be easy to install the toolchain and also path into native windows directory. The QMK Toolbox is easy as finding the built file and clicking a button. 
 
 #### Firmware
 Luckily the Keebio people (or is it person?) are nice and have commited to the QMK code base and added their own everything, that works if you follow their build guide exactly and want their layouts: [https://github.com/qmk/qmk_firmware/tree/master/keyboards/keebio/quefrency](https://github.com/qmk/qmk_firmware/tree/master/keyboards/keebio/quefrency)
