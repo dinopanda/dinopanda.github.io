@@ -75,7 +75,7 @@ Luckily the community is good and has documentation as we found out earlier. But
 
 Follow their guide to how to build to your liking: [https://docs.qmk.fm/](https://docs.qmk.fm/)
 
-As for me, i ended using the Bash on Windows setup with the QMK ToolBox: [https://docs.qmk.fm/#/getting_started_build_tools?id=creators-update](https://docs.qmk.fm/#/getting_started_build_tools?id=creators-update) - [https://github.com/qmk/qmk_toolbox/releases](https://github.com/qmk/qmk_toolbox/releases)
+As for me, i ended using the Bash on Windows setup with the QMK Toolbox: [https://docs.qmk.fm/#/getting_started_build_tools?id=creators-update](https://docs.qmk.fm/#/getting_started_build_tools?id=creators-update) - [https://github.com/qmk/qmk_toolbox/releases](https://github.com/qmk/qmk_toolbox/releases)
 
 I found the new Bash on Windows to be easy to install the toolchain and also path into native windows directory. The QMK TooBox is easy as finding the built file and clicking a button. 
 
@@ -116,6 +116,9 @@ To build this firmware, i decided to do the lazy route. Since these bluetooth mo
 The QMK Docs again came in handy and found out how to easily do this: [https://docs.qmk.fm/#/feature_split_keyboard?id=handedness-by-define](https://docs.qmk.fm/#/feature_split_keyboard?id=handedness-by-define). Simply add the <code>#define MASTER_LEFT</code> or <code>#define MASTER_RIGHT</code> in the same config.h file. 
 
 This means all we have to do to get working firmware now is build 2 separate versions, one with the <code>#define MASTER_LEFT</code> and one with <code>#define MASTER_RIGHT</code> and flash the left and right Feather with the appropriate build. 
+
+#### Flash
+Use the QMK Toolbox tool, [https://github.com/qmk/qmk_toolbox/releases](https://github.com/qmk/qmk_toolbox/releases), to flash, you can figure it out. 
 
 # All the Goodies
 * QMK Docs - [https://docs.qmk.fm/](https://docs.qmk.fm/)
