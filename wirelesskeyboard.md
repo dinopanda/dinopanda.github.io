@@ -102,7 +102,7 @@ Just because documentation is great, doesn't prevent users from being stupid.
 
 First of all to enable bluetooth from QMK, the <code>rules.mk</code> makefile must be edited to suport that, as per [https://docs.qmk.fm/#/feature_bluetooth?id=bluetooth-rulesmk-options](https://docs.qmk.fm/#/feature_bluetooth?id=bluetooth-rulesmk-options). And As per the table above in the documentation we will be using <code>BLUETOOTH = AdafruitBLE</code>. This also means you should probably comment/remove <code>BLUETOOTH_ENABLE = no</code>, or experience who knows what.
 
-Next, is a point of confusing, destruction, confusion, and sadness. There was a point where the <code>F_CPU</code> macro was defined in the <code>rules.mk</code> file. This is no longer true in the newest QMK repo, [https://github.com/qmk/qmk_firmware/commit/2ee961c9e873d577e711431ae0960aa21629525e#diff-424e469cfd48af9d144fe061f2394117](https://github.com/qmk/qmk_firmware/commit/2ee961c9e873d577e711431ae0960aa21629525e#diff-424e469cfd48af9d144fe061f2394117). If we do happen though to take a look at this file when i used it, [https://github.com/qmk/qmk_firmware/blob/b2ee290c9f506e42dd9c4577c8147646c405aeb0/keyboards/keebio/quefrency/rules.mk](https://github.com/qmk/qmk_firmware/blob/b2ee290c9f506e42dd9c4577c8147646c405aeb0/keyboards/keebio/quefrency/rules.mk), we do see the <code>F_CPU</code> to bet set at 16000000. This is the frequency an atmega32u4 can run at. Which is good, our Feather uses the atmega32u4. Unfortunately, names are not the truth. The Feather as clearly printed on the back of it's board is clocked at **8Mhz**. I'm assuming this has to do with the bluethooth module. 
+Next, is a point of confusing, destruction, confusion, and sadness. There was a point where the <code>F_CPU</code> macro was defined in the <code>rules.mk</code> file. This is no longer true in the newest QMK repo, [https://github.com/qmk/qmk_firmware/commit/2ee961c9e873d577e711431ae0960aa21629525e#diff-424e469cfd48af9d144fe061f2394117](https://github.com/qmk/qmk_firmware/commit/2ee961c9e873d577e711431ae0960aa21629525e#diff-424e469cfd48af9d144fe061f2394117). If we do happen though to take a look at this file when i used it, [https://github.com/qmk/qmk_firmware/blob/b2ee290c9f506e42dd9c4577c8147646c405aeb0/keyboards/keebio/quefrency/rules.mk](https://github.com/qmk/qmk_firmware/blob/b2ee290c9f506e42dd9c4577c8147646c405aeb0/keyboards/keebio/quefrency/rules.mk), we do see the <code>F_CPU</code> to bet set at 16000000. This is the frequency an ATmega32U4 can run at. Which is good, our Feather uses the atmega32u4. Unfortunately, names are not the truth. The Feather as clearly printed on the back of it's board is clocked at **8Mhz**. I'm assuming this has to do with the bluethooth module. 
 
 Now, this might seem fine, given the comments about this being **"Note that this value does not *change* the processor frequency - it should merely be updated to reflect the processor speed set externally so that the code can use accurate software delays"**. But descrution and sadness was present when using 16MHz, it seems that this somehow affect my bluetooth module and the associated led lights that the Feather had. The board became unusable, the leds never turned on again, and was tossed. Sad. 
 
@@ -119,6 +119,25 @@ This means all we have to do to get working firmware now is build 2 separate ver
 
 #### Flash
 Use the QMK Toolbox tool, [https://github.com/qmk/qmk_toolbox/releases](https://github.com/qmk/qmk_toolbox/releases), to flash, you can figure it out. 
+
+#### Testing
+There are ways to test the flashed Feather, before soldering it on. 
+
+Of course you should be able to connect to it with bluetooth. If not, well, good luck and try again. 
+
+For testing the keyboard part, uust use a wire and connect a column to a row pin and see if the expected letter is printed on the screen. 
+
+## Step 3 - Smash it together
+It's simple just toss it all together.
+
+Really though, just follow the Keebio Quefrency build guide here - [https://docs.keeb.io/quefrency-build-guide/](https://docs.keeb.io/quefrency-build-guide/). Ignore some of the extra parts not needed like the 2 TRRS Jacks and the TRRS cable, since those parts are used for the split awareness. 
+
+All you have to do is use tiny wires to "expand" the Pro Micro footprint to the Feather footprint and with "careful" soldering, it will be in place. I also tore out the battery JST jack, also "carefully", to attach the switch and move the battery positioning.
+
+As a tip, you should try to put all items, towards the back of the keyboard. Since these parts can get thick, you can get away with some of the thickness by making it slope down and not cause your wrists pain.
+
+# Done
+Well wasn't that easy. 
 
 # All the Goodies
 * QMK Docs - [https://docs.qmk.fm/](https://docs.qmk.fm/)
