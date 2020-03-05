@@ -7,6 +7,11 @@ Okay, yeah sure i had a checklist of things to make it perfect. But that's besid
 
 This is a build guide, but it's mostly my journey into the depths of the keyboard world. 
 
+# Notes
+* Bottom of the page has all the links throughout this adventure
+* Github repo for this github.io has more resources like pictures and the code - [https://github.com/dinopanda/dinopanda.github.io](https://github.com/dinopanda/dinopanda.github.io)
+* The github rendering works better sometimes - [https://github.com/dinopanda/dinopanda.github.io/edit/master/wirelesskeyboard.md](https://github.com/dinopanda/dinopanda.github.io/edit/master/wirelesskeyboard.md)
+
 # Research
 A quick google search of "wireless split keyboard" does not in fact lead to the dream but a bunch of lame big company ergo keyboards that are wireless. lame.
 
