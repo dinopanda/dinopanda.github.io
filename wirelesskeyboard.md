@@ -1,5 +1,5 @@
 # Wireless Keyboard?
-![dreams](https://github.com/dinopanda/dinopanda.github.io/blob/master/pictures/keyboard_top_split.jpg)
+![dreams](https://raw.githubusercontent.com/dinopanda/dinopanda.github.io/master/pictures/keyboard_top_split.jpg)
 
 The dream was simple, a normal split wireless keyboard: better posture, no wires, clean desk. How hard is that supposed to be.
 
